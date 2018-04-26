@@ -14,6 +14,9 @@ gem 'middleman', '~> 4.0'
 gem 'middleman-blog', '~> 4.0'
 gem 'middleman-sprockets', '~> 4.1.0'
 
+gem 'middleman-deploy', '~> 2.0.0.pre.alpha'
+gem 'middleman-disqus', '~>1.2.0'
+
 # For feed.xml.builder
 gem 'builder', '~> 3.2.3'
 
@@ -23,3 +26,7 @@ gem 'redcarpet', '~> 3.4.0'
 
 # For "summary"-Helper
 gem 'nokogiri', '~> 1.8.0'
+
+
+# Fix 'ugly' invalid 
+gem "haml", "~> 4.0"
