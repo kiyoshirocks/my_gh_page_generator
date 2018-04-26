@@ -146,3 +146,33 @@ configure :build do
   ignore 'stylesheets/_*'
   ignore 'stylesheets/vendor/*'
 end
+
+###
+# middleman-deploy
+###
+
+activate :deploy do |deploy|
+  deploy.deploy_method = :git
+  deploy.remote = 'git@github.com:username/username.github.io.git'
+  deploy.branch = 'master'
+  deploy.build_before = true
+end
+
+###
+# Disqus
+###
+
+configure :development do
+  activate :disqus do |d|
+    # d.shortname = "development-shortname"
+    # or setting to `nil` will stop Disqus loading
+    d.shortname = nil
+  end
+end
+
+configure :build do
+  activate :disqus do |d|
+    # using a different shortname for production builds
+    d.shortname = "production-shortname"
+  end
+end
